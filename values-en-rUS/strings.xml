@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agendario</string>
+    <string name="filtro_dia">Tasks for today</string>
+    <string name="filtro_mes">Tasks for this month</string>
+    <string name="filtro_nada">All tasks</string>
+    <string name="orden_fecha">Order by date</string>
+    <string name="orden_titulo">Order by title</string>
+    <string name="colorfondo">Background color</string>
+    <string name="titulo">Title</string>
+    <string name="dia">Day</string>
+    <string name="mes">Month</string>
+    <string name="anio">Year</string>
+    <string name="blanco">White</string>
+    <string name="azul">Blue</string>
+    <string name="verde">Green</string>
+    <string name="amarillo">Yellow</string>
+    <string name="rojo">Red</string>
+</resources>
