@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".Calendario" android:id="@+id/frameLayout2">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <CalendarView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarView" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+    />
+    <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="32dp" app:cardBackgroundColor="@android:color/holo_blue_dark"
+            app:cardCornerRadius="10dp" app:cardElevation="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" android:layout_marginTop="8dp">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout2" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/calendarView">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:elevation="10dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/etTitulo"
+                        app:layout_constraintStart_toStartOf="parent" android:fontFamily="monospace"
+                        android:hint="@string/titulo"
+                        tools:layout_editor_absoluteY="460dp" android:textColor="@android:color/black"
+                        android:textAlignment="center"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:layout_weight="1">
+                    <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/etDia" android:layout_weight="1" android:hint="@string/dia"
+                            android:fontFamily="monospace"
+                            android:maxLength="2" tools:layout_editor_absoluteY="360dp"
+                            tools:layout_editor_absoluteX="17dp" android:textColor="@android:color/black"
+                            android:textAlignment="center"/>
+                    <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/etMes" android:layout_weight="1" android:hint="@string/mes"
+                            android:fontFamily="monospace"
+                            android:maxLength="2" tools:layout_editor_absoluteY="360dp"
+                            tools:layout_editor_absoluteX="317dp" android:textColor="@android:color/black"
+                            android:textAlignment="center"/>
+                    <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/etAnio" android:layout_weight="1" android:hint="@string/anio"
+                            android:fontFamily="monospace"
+                            android:maxLength="4" tools:layout_editor_absoluteY="360dp"
+                            tools:layout_editor_absoluteX="217dp" android:textColor="@android:color/black"
+                            android:textAlignment="center"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageButton
+                    android:src="@drawable/icon_add2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:id="@+id/button" android:scaleType="fitCenter"
+                    android:adjustViewBounds="true" android:background="@android:color/transparent"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

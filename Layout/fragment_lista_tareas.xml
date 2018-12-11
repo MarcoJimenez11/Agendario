@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".Lista_tareas" android:id="@+id/frameLayout">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/recyclerTareas" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout">
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerTareas" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/linearLayout">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="1" android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:id="@+id/tvFiltro" android:layout_weight="1"
+                    android:textColor="@android:color/background_dark" android:text="@string/filtro_nada"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:id="@+id/tvOrden" android:layout_weight="1"
+                    android:textColor="@android:color/black" android:textAlignment="textEnd"
+                    android:text="@string/orden_fecha"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="1">
+            <ImageButton
+                    android:src="@drawable/icon_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/btnFiltrar" android:layout_weight="1"/>
+            <ImageButton
+                    android:src="@drawable/icon_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/btnVista" android:layout_weight="1"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/btnOrdenar"
+                    android:layout_weight="1" android:src="@drawable/icon_sort"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
